@@ -20,4 +20,5 @@ jobs:
         run: |
           git config --global user.name 'Torantulino'
           git config --global user.email 'toran.richards@gmail.com'
-          git remote set
+          git remote set-url origin "https://$GITHUB_TOKEN@github.com/${{ github.repository }}"
+          git push origin HEAD:${{ github.head_ref }}
